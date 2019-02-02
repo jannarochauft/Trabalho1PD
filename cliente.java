@@ -10,9 +10,9 @@ public class ClientCopy {
 		Scanner tc = new Scanner(System.in);
 		System.out.println("File:");
 		String fName = tc.nextLine();
-		File f = new File("CAMINHO DE ORIGEM DO FILE/"+fName);
+		File f = new File("D:\Dados\Documentos\GitHub\Trabalho1PD\Download.txt/"+fName);
 		FileInputStream in = new FileInputStream(f);
-		Socket socket = new Socket("IP DO SERIDOR", PORTA);
+		Socket socket = new Socket("127.0.0.1", 12345);
 		OutputStream out = socket.getOutputStream();
 		OutputStreamWriter osw = new OutputStreamWriter(out);
 		BufferedWriter writer = new BufferedWriter(osw);

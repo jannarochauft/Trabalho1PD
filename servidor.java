@@ -9,14 +9,15 @@ import java.net.Socket;
 public class ServerCopy {
 	public static void main(String[] args) {
 		try {
-			ServerSocket server = new ServerSocket(PORTA);
+			ServerSocket server = new ServerSocket(12345);
+			System.out.println("Servidor ouvindo a porta 12345");
 			Socket clSocket = server.accept();
 			InputStream in = clSocket.getInputStream();
 			InputStreamReader isr = new InputStreamReader(in);
 			BufferedReader reader = new BufferedReader(isr);
 			String fName = reader.readLine();
 			System.out.println(fName);
-			File f1 = new File("CAMINO PARA DESTINO DO FILE/" + fName);
+			File f1 = new File("D:\Dados\Documentos\GitHub\Trabalho1PD\" + fName);
 			FileOutputStream out = new FileOutputStream(f1);
 			int c;
 			while ((c = in.read()) != -1) {
