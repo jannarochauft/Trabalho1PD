@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
-public class ServerCopy {
+public class servidor {
 	public static void main(String[] args) {
 		try {
 			ServerSocket server = new ServerSocket(12345);
@@ -17,7 +17,7 @@ public class ServerCopy {
 			BufferedReader reader = new BufferedReader(isr);
 			String fName = reader.readLine();
 			System.out.println(fName);
-			File f1 = new File("D:\Dados\Documentos\GitHub\Trabalho1PD\" + fName);
+			File f1 = new File("D:Dados/Documentos/GitHub/Trabalho1PD/" + fName);
 			FileOutputStream out = new FileOutputStream(f1);
 			int c;
 			while ((c = in.read()) != -1) {
